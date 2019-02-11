@@ -1,5 +1,4 @@
 from evernote.api.client import EvernoteClient
-from evernote.api.client import NoteStore
 import evernote.edam.type.ttypes as Types
 import evernote.edam.error.ttypes as Errors
 import json
@@ -42,8 +41,8 @@ def makeTag(tagname):
     return tag
 
 
-#tgname = raw_input('Enter a tag name: ')
-#makeTag(tgname)
+tgname = raw_input('Enter a tag name: ')
+makeTag(tgname)
 
 def makeWeekTags():
     i = 0
@@ -78,7 +77,7 @@ def makeMonthTags():
     makeTag('mm:december')
     return None
     
-makeWeekTags()
-makeMonthTags()
-makeYearTags() 
+#makeWeekTags()
+#makeMonthTags()
+#makeYearTags() 
     

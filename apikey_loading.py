@@ -1,7 +1,7 @@
 import json
 
 fname = raw_input('Enter the Evernote API Key file name: ')
-if ( len(fname) < 1 ) : fname = 'apikey.json'
+if ( len(fname) < 1 ) : fname = 'apikey2.json'
 
 # {"key" : "evernote_username", 
 # "secret" : "secret_key",

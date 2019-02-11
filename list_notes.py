@@ -2,7 +2,7 @@ from evernote.api.client import EvernoteClient
 from evernote.api.client import NoteStore
 import json
 
-fname = 'apikey.json'
+fname = 'apikey2.json'
 
 str_data = open(fname).read()
 apikey = json.loads(str_data)
@@ -16,7 +16,7 @@ if ( len(nbname) < 1 ) : nbname = 'logbook_2015'
 dev_token = apikey['token']
 
 
-client = EvernoteClient(token=dev_token)
+client = EvernoteClient(token=dev_token, sandbox=False)
 uStore = client.get_user_store()
 user = uStore.getUser()
 print "Evernote User Name:", user.username
@@ -47,4 +47,4 @@ ourNoteList = nStore.findNotesMetadata(filter, 0, 100, spec)
 
 for note in ourNoteList.notes:
     print "%s :: %s" % (note.guid, note.title)
-    print note.tagGuids
+    #print note.tagGuids
